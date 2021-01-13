@@ -20,7 +20,7 @@ TWO FACTOR AUTHENTICATION (2FA) must be enabled.
 
 After connect to:
 
-[https://id.twitch.tv/oauth2/authorize?client_id={CLIENT_ID}&redirect_uri={REDIRECT}&response_type=token](https://id.twitch.tv/oauth2/authorize?client_id={CLIENT_ID}&redirect_uri={REDIRECT}&response_type=token) but replace {CLIENT_ID} by your application ID and {REDIRECT} by an url (one of the ones that tou filled in your accouint), for instance : [http://localhost:3000/](http://localhost:3000/).
+[https://id.twitch.tv/oauth2/authorize?client_id={CLIENT_ID}&redirect_uri={REDIRECT}&response_type=token](https://id.twitch.tv/oauth2/authorize?client_id={CLIENT_ID}&redirect_uri={REDIRECT}&response_type=token) but replace {CLIENT_ID} by your application ID and {REDIRECT} by an url (one of the ones that you filled in your account), for instance : [http://localhost:3000/](http://localhost:3000/).
 
 Accept conditions.
 
@@ -42,9 +42,9 @@ let api = axios.create({
 export default api;
 ````
 
-
+Note: don't use `{}` in the credentials
 
 ## Useful links
 - [Ziratsu/twitchclonereact](https://github.com/Ziratsu/twitchclonereact)
-- []()
+- [Twitch Developer Documentation](https://dev.twitch.tv/docs)
 - []()
