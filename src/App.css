@@ -112,11 +112,112 @@ body {
  color: #efebf5;
 }
 
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    display: none;
+  }
+}
+
 /* \ SIDEBAR component */
 
+/* GAMES component */
 
+.titleGames {
+  padding-top: 90px;
+  font-size: 50px;
+  font-weight: 300;
+  padding-left: 260px;
+  padding-bottom: 50px;
+}
 
+.flexHome {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 260px; /* shift for sidebar */
+}
 
+.cardGame {
+  height: 480px;
+  width: 280px;
+  margin: 0 30px 30px 0;
+  position: relative;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 2px 11px 36px -16px rgba(0,0,0,0.75);
+}
+
+.cardGame:hover {
+  transform: translateY(-5px);
+}
+
+.imgCard {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.cardBodyGame {
+  height: 144px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly; /* equal space between elements */
+}
+
+.titleCardsGames {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-transform: uppercase; /* three dots when hidden part */
+  width:80%;
+  overflow: hidden;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.btnCard {
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #212529;
+  font-size: 14px;
+  line-height: 1.125;
+  border-radius: 5px;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+.btnCard:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  .titleGames {
+    padding-left: 0px;
+  }
+  .flexHome {
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .titleGames {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 559px) {
+  .cardGame {
+    margin: 0 0 30px 0;
+  }
+  .flexHome{
+    padding-left: 0px;
+  }
+}
+
+/* \ GAMES component */
 
 
 

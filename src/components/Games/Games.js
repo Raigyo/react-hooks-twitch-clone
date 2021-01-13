@@ -41,8 +41,8 @@ function Games (){
             <div className="cardBodyGame">
               <h5 className="titleCardsGames">
                 {game.name}
-                <div className="btnCard">Watch {game.name}!</div>
               </h5>
+              <div className="btnCard">Watch {game.name} !</div>
             </div>
           </div>
 
