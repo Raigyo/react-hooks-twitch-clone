@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import api from "../../api";
 
-function Sidebar() {
+function TopStreams() {
   // state / setter
-  const [topStreams, setTopStreams] = useState([]);
+  const [topChannels, setTopChannels] = useState([]);
 
   // API CALL
   useEffect(() => {
@@ -36,40 +36,44 @@ function Sidebar() {
         const selectedUser = arrayUsers.filter(
           (user) => user.id === stream.user_id
         );
-        stream.true_pic = selectedUser[0].profile_image_url;
         stream.login = selectedUser[0].login;
+        let newUrl = stream.thumbnail_url
+          .replace("{width}", "320")
+          .replace("{height}", "180");
+        stream.thumbnail_url = newUrl;
         return stream;
       });
-      // console.log("finalArray:", finalArray)
-      setTopStreams(finalArray.slice(0, 6));
+      setTopChannels(finalArray);
     };
     fetchData();
   }, []);
 
   return (
     <>
-      <nav className="sidebar">
-        <h2 className="titleSidebar">Recommended channels</h2>
-        <ul className="streamList">
-          {topStreams.map((stream, index) => (
-            <li key={index} className="containerFlexSidebar">
-              <img
-                src={stream.true_pic}
-                alt="logo user"
-                className="profilePicRound"
-              />
-              <div className="streamUser">{stream.user_name}</div>
-              <div className="viewerRight">
-                <div className="pointRed"></div>
-                <div>{stream.viewer_count}</div>
-              </div>
-              <div className="gameNameSidebar">{stream.game_name}</div>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <h1 className="titleGames">Popular streams</h1>
+      <div className="flexHome">
+        {topChannels.map((channel, index) => (
+          <div key={index} className="cardStream">
+            <img
+              src={channel.thumbnail_url}
+              className="imgCard"
+              alt="game played"
+            />
+
+            <div className="cardBodyStream">
+              <h5 className="titleCardStream">{channel.user_name}</h5>
+              <p className="txtStream">{channel.game_name}</p>
+
+              <p className="txtStream viewers">
+                Viewers: {channel.viewer_count}
+              </p>
+              <div className="btnCard">Watch: {channel.user_name}</div>
+            </div>
+          </div>
+        ))}
+      </div>
     </>
   );
 }
 
-export default Sidebar;
+export default TopStreams;

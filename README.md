@@ -44,6 +44,12 @@ export default api;
 
 Note: don't use `{}` in the credentials
 
+## Dependencies
+
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom): DOM bindings for React Router.
+
+`npm i react-router-dom`
+
 ## Useful links
 - [Ziratsu/twitchclonereact](https://github.com/Ziratsu/twitchclonereact)
 - [Twitch Developer Documentation](https://dev.twitch.tv/docs)
