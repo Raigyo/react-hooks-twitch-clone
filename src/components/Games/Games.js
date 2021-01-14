@@ -6,16 +6,17 @@ function Games (){
   // state / setter
   const [games, setGames] = useState([]);
 
-  // API CALL
+  // API CALL: Get Top Games
   // useEffect  runs after render and every time the DOM updates like
   // componentDidMount, componentDidUpdate, componentWillUnmount.
-  // [] as second argument: just run the function once
+  // [] as second argument: just run the function once (avoid infinite loop)
   useEffect(() => {
     const fetchData = async () => {
       const result = await api.get('https://api.twitch.tv/helix/games/top');
-      console.log(result);
+      // console.log(result);
 
-      let dataArray = result.data.data; // most played games array
+       // Aaay of games sorted by number of current viewers on Twitch, most popular first
+      let dataArray = result.data.data;
       // mapping of dataArray
       let finalArray = dataArray.map(game => {
         // we create a new url for images and we add width and height
