@@ -50,6 +50,10 @@ Note: don't use `{}` in the credentials
 
 `npm i react-router-dom`
 
+- [react-twitch-embed-video](https://www.npmjs.com/package/react-twitch-embed-video): Your solution to embeding the Twitch video player in your ReactJS application.
+
+`npm i react-twitch-embed-video`
+
 ## Useful links
 - [Ziratsu/twitchclonereact](https://github.com/Ziratsu/twitchclonereact)
 - [Twitch Developer Documentation](https://dev.twitch.tv/docs)

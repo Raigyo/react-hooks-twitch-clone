@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import api from "../../api";
 
 function Sidebar() {
@@ -52,19 +53,27 @@ function Sidebar() {
         <h2 className="titleSidebar">Recommended channels</h2>
         <ul className="streamList">
           {topStreams.map((stream, index) => (
-            <li key={index} className="containerFlexSidebar">
-              <img
-                src={stream.true_pic}
-                alt="logo user"
-                className="profilePicRound"
-              />
-              <div className="streamUser">{stream.user_name}</div>
-              <div className="viewerRight">
-                <div className="pointRed"></div>
-                <div>{stream.viewer_count}</div>
-              </div>
-              <div className="gameNameSidebar">{stream.game_name}</div>
-            </li>
+            <Link
+              key={index}
+              className="link"
+              to={{
+                pathname: `/live/${stream.login}`,
+              }}
+            >
+              <li key={index} className="containerFlexSidebar">
+                <img
+                  src={stream.true_pic}
+                  alt="logo user"
+                  className="profilePicRound"
+                />
+                <div className="streamUser">{stream.user_name}</div>
+                <div className="viewerRight">
+                  <div className="pointRed"></div>
+                  <div>{stream.viewer_count}</div>
+                </div>
+                <div className="gameNameSidebar">{stream.game_name}</div>
+              </li>
+            </Link>
           ))}
         </ul>
       </nav>
