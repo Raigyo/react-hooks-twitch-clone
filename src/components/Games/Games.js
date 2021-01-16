@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import api from "../../api";
 
 function Games() {
-  // state / setter
+  // state / setter - destructuring
   const [games, setGames] = useState([]);
 
   // API CALL: Get Top Games
@@ -44,7 +45,17 @@ function Games() {
             />
             <div className="cardBodyGame">
               <h5 className="titleCardsGames">{game.name}</h5>
-              <div className="btnCard">Watch {game.name} !</div>
+              <Link
+                className="link"
+                to={{
+                  pathname: `/game/${game.name}`,
+                  state: {
+                    gameId: game.id,
+                  },
+                }}
+              >
+                <div className="btnCard">Watch {game.name} !</div>
+              </Link>
             </div>
           </div>
         ))}

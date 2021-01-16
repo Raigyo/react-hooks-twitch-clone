@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import api from "../../api";
 
 function TopStreams() {
-  // state / setter
+  // state / setter - destructuring
   const [topChannels, setTopChannels] = useState([]);
 
   // API CALL

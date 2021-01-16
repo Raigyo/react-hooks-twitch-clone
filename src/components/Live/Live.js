@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import ReactTwitchEmbedVideo from "react-twitch-embed-video";
 import { useParams } from "react-router-dom";
-/* useParams returns an object of key/value pairs of URL parameters.
-Use it to access match.params of the current <Route>. */
+/* useParams: This hook gives us access to the params of that particular route. params
+are parameters whose values are set dynamically in a URL.
+Usually, the way we access the params in previous versions of react-router
+was through the match props passed to the component. */
 import api from "../../api";
 
 function Live() {
+  // react-router-dom hook - destructuring
   let { slug } = useParams();
-  // state / setter
+  // state / setter - destructuring
   const [infoStream, setInfoStream] = useState([]);
 
   // API CALL
@@ -17,7 +20,7 @@ function Live() {
       const result = await api.get(
         `https://api.twitch.tv/helix/streams?user_login=${slug}`
       );
-      console.log(result);
+      // console.log(result);
       setInfoStream(result.data.data[0]);
     };
     fetchData();
