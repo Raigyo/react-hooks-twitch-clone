@@ -95,6 +95,35 @@ body {
   width: 25px;
 }
 
+@media screen and (max-width: 950px) {
+  .linkNav:nth-child(4) {
+    width: 550px; /* we reduce the input */
+  }
+}
+@media screen and (max-width: 900px) {
+  .listMenu {
+    flex-direction: column;
+    height: 250px;
+    padding-top: 50px;
+  }
+  .linkNav {
+    height: 100px;
+    background: #6441a4;
+    width: 100%;
+  }
+  .linkNav:nth-child(4){
+    width: 100%!important;
+    padding: 10px 0 20px 0;
+  }
+  .formSubmit {
+    justify-content: center;
+  }
+  .menuResBtn {
+    display: block!important;
+    z-index: 1000;
+  }
+}
+
 /* \ HEADER component */
 
 /* SIDEBAR component */

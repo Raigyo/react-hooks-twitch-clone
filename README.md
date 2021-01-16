@@ -1,12 +1,30 @@
-# React Twitch clone
+# React Twitch clone using functionnal programming and hooks
 
 *January 2021*
 
-> 🔨 From udemy '[Cloner Twitch avec React](https://www.udemy.com/course/cloner-twitch-avec-react/)'.
-
+> 🔨 Clone of Twitch (some functionnalities) using React ant Twitch API. It uses functionnal programming including React/React Router Dom hooks. From udemy '[Cloner Twitch avec React](https://www.udemy.com/course/cloner-twitch-avec-react/)'.
 
 
 ![react-twitch-logo](_readme-img/react-twitch-logo.png)
+
+## Architecture
+
+Src -- components
+    |  |- Games
+    |  |   |_ Games.js
+    |  |- GameStreams
+    |  |   |_ GameStreams.js
+    |  |- Headers
+    |  |   |_ Headers.js
+    |  |- Live
+    |  |   |_ Live.js
+    |  |- Sidebar
+    |  |   |_ Sidebar.js
+    |  |- TopStreams
+    |  |   |_ TopStreams.js
+    |--apis.js
+    |--App.css
+    |--App.js
 
 ## Twitch API
 
