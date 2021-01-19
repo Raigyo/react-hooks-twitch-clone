@@ -9,6 +9,7 @@ function Header() {
   // states / setters - destructuring
   const [menu, showMenu] = useState(false); // used for responsive menu
   const [smallScreen, setSmallScreen] = useState(false); // to test screen size
+  const [searchInput, setSearch] = useState("");
 
   // test if we > || < 900px
   useEffect(() => {
@@ -33,6 +34,14 @@ function Header() {
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const handleKeyPress = (e) => {
+    setSearch(e.target.value);
+  };
+
   return (
     <>
       <nav className="headerTop">
@@ -55,15 +64,28 @@ function Header() {
               </Link>
             </li>
             <li className="linkNav">
-              <form className="formSubmit">
-                <input type="text" className="inputSearch" />
-                <button type="submit">
-                  <img
-                    src={search}
-                    alt="magnifier icon"
-                    className="logoMagnifier"
-                  />
-                </button>
+              <form className="formSubmit" onSubmit={handleSubmit}>
+                <input
+                  required
+                  value={searchInput}
+                  onChange={(e) => handleKeyPress(e)}
+                  type="text"
+                  className="inputSearch"
+                />
+                <Link
+                  className="link"
+                  to={{
+                    pathname: `/results/${searchInput}`,
+                  }}
+                >
+                  <button type="submit">
+                    <img
+                      src={search}
+                      alt="magnifier icon"
+                      className="logoMagnifier"
+                    />
+                  </button>
+                </Link>
               </form>
             </li>
           </ul>

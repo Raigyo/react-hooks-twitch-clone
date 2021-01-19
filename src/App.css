@@ -502,3 +502,91 @@ body {
 }
 
 /* GAME STREAM component */
+
+/* RESULTS component */
+
+.containerShiftResults {
+  overflow-x: hidden;
+  padding-top: 50px;
+  padding-left: 239px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+.containerShiftResults h4 {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: 24px;
+}
+.cardResults {
+  height: 580px;
+  width: 350px;
+  margin-bottom: 35px;
+  position: relative;
+  transition: all 0.4s;
+  /* Proprietes bootstrap */
+  border-radius: 10px;
+  box-shadow: 2px 11px 36px -16px rgba(0,0,0,0.75);
+  margin-top: 20px;
+}
+.cardBodyResults {
+  height: 230px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cardBodyResults .btnCarte{
+  align-self: flex-end;
+}
+
+.txtResult {
+  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
+}
+.btnResult {
+  background: rgb(255, 191, 0);
+  color: #000;
+  font-size: 17px;
+}
+.btnResult:hover {
+  color: #000;
+}
+
+/* Custom */
+@media screen and (max-width:1200px) {
+  .containerShiftResults {
+  
+    overflow-x: hidden;
+    padding-top: 0px;
+    padding-left: 0px;
+
+  }
+  .containerShiftResults h4 {
+    padding-top: 100px;
+  }
+
+}
+@media screen and (max-width:600px) {
+  .containerShiftResults h4 {
+
+    padding-bottom: 20px;
+    font-size: 16px;
+  }
+  .cardResults {
+    height: 580px;
+    width: 300px;
+
+  }
+}
+.spanTxt {
+  color: #000!important;
+}
+.titleResults {
+ padding-top: 50px;
+}
+
+/* \ RESULTS component */
