@@ -3,6 +3,8 @@
 ./package-lock.json
 package-lock.json
 
+*.pem
+
 api.js
 
 # dependencies

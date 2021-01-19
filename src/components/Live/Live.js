@@ -21,12 +21,16 @@ function Live() {
         `https://api.twitch.tv/helix/streams?user_login=${slug}`
       );
       // console.log(result);
-      setInfoStream(result.data.data[0]);
+
+      // we check if the streamer is online
+      result.data.data.length === 0
+        ? setInfoStream(false)
+        : setInfoStream(result.data.data[0]);
     };
     fetchData();
   }, [slug]);
 
-  return (
+  return infoStream ? (
     <>
       <div className="containerShifted">
         <ReactTwitchEmbedVideo height="754" width="100%" channel={slug} />
@@ -38,6 +42,15 @@ function Live() {
             {infoStream.language}
           </div>
           <div className="gameName">Game: {infoStream.game_name}</div>
+        </div>
+      </div>
+    </>
+  ) : (
+    <>
+      <div className="containerShifted">
+        <ReactTwitchEmbedVideo height="754" width="100%" channel={slug} />
+        <div className="contInfo">
+          <div className="titleStream">The streamer is offline ! </div>
         </div>
       </div>
     </>

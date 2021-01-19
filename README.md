@@ -10,6 +10,8 @@
 ## Architecture
 
 Src -- components
+    |  |- Error
+    |  |   |_ Error.js
     |  |- Games
     |  |   |_ Games.js
     |  |- GameStreams
@@ -18,6 +20,8 @@ Src -- components
     |  |   |_ Headers.js
     |  |- Live
     |  |   |_ Live.js
+    |  |- Results
+    |  |   |_ Results.js
     |  |- Sidebar
     |  |   |_ Sidebar.js
     |  |- TopStreams
@@ -25,6 +29,17 @@ Src -- components
     |--apis.js
     |--App.css
     |--App.js
+    |_-package.json
+
+## How to test locally
+
+- Clone *local-version* branch
+- `npm install`
+- `npm start`
+
+Note:
+- You will need to provide your own credentials for the Twitch Api in *./api.js*
+- You will need to whitelist your dev server IP / localhost in Twitch Dev Dashboard.
 
 ## Twitch API
 
@@ -62,7 +77,7 @@ export default api;
 
 Note: don't use `{}` in the credentials
 
-## Dependencies
+## Dependencies / Stack
 
 - [react-router-dom](https://www.npmjs.com/package/react-router-dom): DOM bindings for React Router.
 
@@ -76,3 +91,6 @@ Note: don't use `{}` in the credentials
 - [Ziratsu/twitchclonereact](https://github.com/Ziratsu/twitchclonereact)
 - [Twitch Developer Documentation](https://dev.twitch.tv/docs)
 - [Hooks Introduced in React-Router v5.1](https://dev.to/finallynero/hooks-introduced-in-react-router-v5-1-7g8)
+- [buralog/react-twitch-app](https://github.com/buralog/react-twitch-app)
+- [Homebrew](https://brew.sh/)
+- [FiloSottile/mkcert](https://github.com/FiloSottile/mkcert): mkcert is a simple tool for making locally-trusted development certificates. It requires no configuration.

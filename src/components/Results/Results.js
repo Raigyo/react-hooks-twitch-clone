@@ -14,7 +14,7 @@ function Results() {
       const searchResult = await api.get(
         `https://api.twitch.tv/helix/users?login=${cleanSearch}`
       );
-      console.log(searchResult);
+      // console.log(searchResult);
 
       searchResult.data.data.length === 0
         ? setResult(false)
