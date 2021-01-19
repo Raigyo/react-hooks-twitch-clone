@@ -6,6 +6,8 @@ package-lock.json
 *.pem
 .env
 api.js
+.eslintcache
+debug.log
 
 # dependencies
 /node_modules
