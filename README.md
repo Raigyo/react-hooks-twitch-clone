@@ -9,6 +9,7 @@
 
 ## Architecture
 
+````
 Src -- components
     |  |- Error
     |  |   |_ Error.js
@@ -30,10 +31,11 @@ Src -- components
     |--App.css
     |--App.js
     |_-package.json
+````
 
 ## How to test locally
 
-- Clone *local-version* branch
+- Clone *local-version* [branch](https://github.com/Raigyo/react-hooks-twitch-clone/tree/local-version)
 - `npm install`
 - `npm start`
 
