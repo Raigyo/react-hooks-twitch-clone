@@ -7,6 +7,14 @@
 
 ![react-twitch-logo](_readme-img/react-twitch-logo.png)
 
+![capture](_readme-img/capture-01.jpg)
+
+![capture](_readme-img/capture-02.jpg)
+
+![capture](_readme-img/capture-03.jpg)
+
+![capture](_readme-img/capture-04.jpg)
+
 ## Architecture
 
 ````
