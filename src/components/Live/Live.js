@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 are parameters whose values are set dynamically in a URL.
 Usually, the way we access the params in previous versions of react-router
 was through the match props passed to the component. */
-import api from "../../api";
+import api from "../../api-prod";
 
 function Live() {
   // react-router-dom hook - destructuring

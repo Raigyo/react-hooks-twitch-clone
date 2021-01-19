@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useLocation, useParams } from "react-router-dom";
 /* The useLocation hook returns the location object which contains the pathname,
 search, hash, key and the state properties of the current location.*/
-import api from "../../api";
+import api from "../../api-prod";
 
 function GameStreams() {
   // react-router-dom hooks - destructuring

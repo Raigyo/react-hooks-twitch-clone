@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import api from "../../api";
+import api from "../../api-prod";
 import { Link, useParams } from "react-router-dom";
 import Error from "../Error/Error";
 
