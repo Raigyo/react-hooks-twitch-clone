@@ -4,6 +4,8 @@
 
 > 🔨 Clone of Twitch (some functionnalities) using React ant Twitch API. It uses functionnal programming including React/React Router Dom hooks. From udemy '[Cloner Twitch avec React](https://www.udemy.com/course/cloner-twitch-avec-react/)'.
 
+See demo on [Heroku](https://raigyo-twitch-clone.herokuapp.com/).
+
 
 ![react-twitch-logo](_readme-img/react-twitch-logo.png)
 
@@ -40,6 +42,10 @@ Src -- components
     |--App.js
     |_-package.json
 ````
+
+## Online version
+
+See demo on [Heroku](https://raigyo-twitch-clone.herokuapp.com/).
 
 ## How to test locally
 
