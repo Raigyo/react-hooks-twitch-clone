@@ -10,7 +10,8 @@ function Results() {
 
   let cleanSearch = slug.replace(/ /g, ""); /* regex delete spaces */
   useEffect(() => {
-    const fetchData = async () => {
+    // IIFE
+    (async () => {
       const searchResult = await api.get(
         `https://api.twitch.tv/helix/users?login=${cleanSearch}`
       );
@@ -19,8 +20,7 @@ function Results() {
       searchResult.data.data.length === 0
         ? setResult(false)
         : setStreamerInfo(searchResult.data.data);
-    };
-    fetchData();
+    })();
   }, [cleanSearch]);
   return result ? (
     <>

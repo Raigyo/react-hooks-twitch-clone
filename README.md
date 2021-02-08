@@ -104,3 +104,4 @@ Note: don't use `{}` in the credentials
 - [buralog/react-twitch-app](https://github.com/buralog/react-twitch-app)
 - [Homebrew](https://brew.sh/)
 - [FiloSottile/mkcert](https://github.com/FiloSottile/mkcert): mkcert is a simple tool for making locally-trusted development certificates. It requires no configuration.
+- [How to write Immediately-invoked / Anonymous Async Functions (IIFE)](https://usefulangle.com/post/248/javascript-async-anonymous-function-iife#:~:text=Immediately%2Dinvoked%20%2F%20anonymous%20async%20functions%20are%20a%20way%20to%20use,without%20polluting%20the%20global%20namespace.)
