@@ -11,7 +11,8 @@ function Games() {
   // componentDidMount, componentDidUpdate, componentWillUnmount.
   // [] as second argument: just run the function once (avoid infinite loop)
   useEffect(() => {
-    const fetchData = async () => {
+    // Immediately Invoked Function Expression / IIFE
+    (async () => {
       const result = await api.get("https://api.twitch.tv/helix/games/top");
       // console.log(result);
 
@@ -27,8 +28,7 @@ function Games() {
         return game;
       });
       setGames(finalArray); // we set the state
-    };
-    fetchData(); // Immediately Invoked Function Expression / IIFE
+    })();
   }, []);
   // console.log("games array:", games);
 

@@ -16,7 +16,8 @@ function GameStreams() {
 
   // API CALL
   useEffect(() => {
-    const fetchData = async () => {
+    // Immediately Invoked Function Expression / IIFE
+    (async () => {
       // Get Streams
       const result = await api.get(
         `https://api.twitch.tv/helix/streams?game_id=${location.state.gameId}`
@@ -61,8 +62,7 @@ function GameStreams() {
       });
       setViewers(totalViewers);
       setStreamData(finalArray);
-    };
-    fetchData();
+    })();
   }, [location.state.gameId]);
   // console.log("viewers: ", viewers);
   // console.log("streamData: ", streamData);

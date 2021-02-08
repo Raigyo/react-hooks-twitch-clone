@@ -15,7 +15,8 @@ function Live() {
 
   // API CALL
   useEffect(() => {
-    const fetchData = async () => {
+    // Immediately Invoked Function Expression / IIFE
+    (async () => {
       // Get Streams
       const result = await api.get(
         `https://api.twitch.tv/helix/streams?user_login=${slug}`
@@ -26,8 +27,7 @@ function Live() {
       result.data.data.length === 0
         ? setInfoStream(false)
         : setInfoStream(result.data.data[0]);
-    };
-    fetchData();
+    })();
   }, [slug]);
 
   return infoStream ? (

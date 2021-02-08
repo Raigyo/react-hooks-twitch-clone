@@ -8,7 +8,8 @@ function TopStreams() {
 
   // API CALL
   useEffect(() => {
-    const fetchData = async () => {
+    // Immediately Invoked Function Expression / IIFE
+    (async () => {
       // Get Streams
       const result = await api.get("https://api.twitch.tv/helix/streams");
 
@@ -45,8 +46,7 @@ function TopStreams() {
         return stream;
       });
       setTopChannels(finalArray);
-    };
-    fetchData();
+    })();
   }, []);
 
   return (
